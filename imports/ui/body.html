@@ -4,6 +4,9 @@
             <h1>Todo List ({{ incompleteCount }}) </h1>
         </header>
 
+        {{ > loginButtons }}
+        
+        {{ #if currentUser }}
         <label class="hide-completed">
             <input type="checkbox" />
             Hide Completed Tasks
@@ -18,5 +21,6 @@
             {{> task}}
             {{/each}}
         </ul>
+        {{ /if }}
     </div>
 </body>
